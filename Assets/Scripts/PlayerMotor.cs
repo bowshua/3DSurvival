@@ -32,6 +32,11 @@ public class PlayerMotor : MonoBehaviour
     {
         isGrounded = controller.isGrounded;
 
+        if(isGrounded)
+        {
+            animator.SetBool("ifJumping", false);
+        }
+    
         if(lerpCrouch)
         {
             crouchTimer += Time.deltaTime;
@@ -96,7 +101,8 @@ public class PlayerMotor : MonoBehaviour
     {
         if(isGrounded)
         {
-            animator.SetBool("isJumping", true);
+            animator.SetTrigger("isJumping");
+            animator.SetBool("ifJumping", true);
             playerVelocity.y = Mathf.Sqrt(jumpHeight * -3.0f * gravity);
         }
     }
