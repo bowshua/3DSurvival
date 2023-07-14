@@ -21,6 +21,7 @@ public class NewBehaviourScript : MonoBehaviour
         look = GetComponent<PlayerLook>();
         animator = GetComponent<Animator>();
 
+
         onFoot.Jump.performed += ctx => motor.Jump();
 
        
@@ -34,7 +35,9 @@ public class NewBehaviourScript : MonoBehaviour
     void FixedUpdate()
     {
         //tell the playermotor to move using our movement action
-        motor.ProcessMove(onFoot.Movement.ReadValue<Vector2>());
+
+            motor.ProcessMove(onFoot.Movement.ReadValue<Vector2>());
+
     }
 
     private void LateUpdate()

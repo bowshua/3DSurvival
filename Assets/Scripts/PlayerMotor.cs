@@ -31,12 +31,13 @@ public class PlayerMotor : MonoBehaviour
     void Update()
     {
         isGrounded = controller.isGrounded;
-
+        
         if(isGrounded)
         {
             animator.SetBool("ifJumping", false);
         }
-    
+
+
         if(lerpCrouch)
         {
             crouchTimer += Time.deltaTime;
@@ -63,7 +64,7 @@ public class PlayerMotor : MonoBehaviour
     }
     //receive inputs from inputmanager script
     public void ProcessMove(Vector2 input)
-    {
+    {   
         Vector3 moveDirection = Vector3.zero;
         moveDirection.x = input.x;
         moveDirection.z = input.y;
@@ -101,8 +102,6 @@ public class PlayerMotor : MonoBehaviour
     {
         if(isGrounded)
         {
-            animator.SetTrigger("isJumping");
-            animator.SetBool("ifJumping", true);
             playerVelocity.y = Mathf.Sqrt(jumpHeight * -3.0f * gravity);
         }
     }

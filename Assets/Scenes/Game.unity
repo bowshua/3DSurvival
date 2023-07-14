@@ -759,6 +759,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1782702501690864755, guid: 60770bdb4dc667c45bea53db0339dc05, type: 3}
       insertIndex: 4
       addedObject: {fileID: 614823741}
+    - targetCorrespondingSourceObject: {fileID: 1782702501690864755, guid: 60770bdb4dc667c45bea53db0339dc05, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 614823748}
   m_SourcePrefab: {fileID: 100100000, guid: 60770bdb4dc667c45bea53db0339dc05, type: 3}
 --- !u!1 &614823740 stripped
 GameObject:
@@ -841,6 +844,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1438546959266459337, guid: 60770bdb4dc667c45bea53db0339dc05, type: 3}
   m_PrefabInstance: {fileID: 614823739}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &614823748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 614823740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9b83c7898079de4390436311ef33de2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 614823740}
 --- !u!1 &639081088
 GameObject:
   m_ObjectHideFlags: 0
@@ -1584,7 +1600,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1716732224}
   m_Layer: 0
-  m_Name: TestBuildingPrefab
+  m_Name: Bank Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
