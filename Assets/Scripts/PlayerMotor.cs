@@ -88,7 +88,7 @@ public class PlayerMotor : MonoBehaviour
     public void Sprint()
     {
         sprinting = !sprinting;
-        if(sprinting)
+        if(sprinting && !(Input.GetKey("s")))
         {
             speed = 30;
         }
